@@ -1,0 +1,23 @@
+# Dependency directories
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Optional npm cache directory
+.npm
+
+env
+**/*.pyc
+**/__pycache__
+media
+.DS_Store
+*.sqlite3
+*.env
+
+# Accept these files in the repository
+!.gitignore
+/.env
+/.vscode
