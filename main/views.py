@@ -4,4 +4,4 @@ def page404(request, exception=None):
     return render (request, "index.html", status=404)
 
 def home_view(request):
-    return render (request, "index.html", {})
+    return render (request, "home.html", {})
