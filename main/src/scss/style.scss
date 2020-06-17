@@ -7,192 +7,308 @@
 
 
 /* HOME */
+$firstcolor : rgb(48, 48, 48);
 $secondcolor : rgb(38, 105, 102);
 $thirdcolor : rgb(38, 105, 102);
+$fourthcolor: #e2e2e2;
 $animationborder :linear-gradient(to right, rgb(38, 105, 102) 100%, rgb(38, 105, 102) 100%);
 
+
 .background-wrapper{
-    background-image: linear-gradient(to right, #aaaaaa 0%, #e2e2e2 100%);
-    height: 100vh;
+    background-color:$fourthcolor;
+    font-family: 'Comfortaa';
+    height: 100%;
+    width: 100%;
     overflow: hidden;
 
     .grid-wrapper{
-        width: 150vw;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         transform-origin: center;
-        transform: translateY(-141vh) translateX(-25vw) rotateZ(45deg) ;
-        
-        .grid-wrapper-topspace,.grid-wrapper-bottomspace{
-            border-bottom: 3px solid $thirdcolor;
-            border-top: 3px solid $thirdcolor;
-            height: 150%;
-            transition: background-color 0.8s ease-in;
-            transform:translateX(2000px); //gsap            
-        }
-        .grid-wrapper-bottomspace{
-            transform:translateX(-2000px); //gsap            
-        }
-        .grid-wrapper-middle{
-            margin: 12vh 0;
-            display: flex;
-            justify-content: center;
-            .grid-wrapper-leftspace,.grid-wrapper-rightspace{
-                flex: 1;
-                transition: background-color 0.8s ease-in;
+        transform:rotateZ(45deg) ;
+        color:$firstcolor;
 
-                // Border Animation //
-                background-repeat: no-repeat;
-                background-image:   $animationborder,$animationborder,$animationborder,$animationborder;
-                background-size:    0 0,
-                                    0 0,
-                                    0 0,
-                                    0 0;
-                background-position:    0 100%,
-                                        100% 100%,
-                                        100% 0,
-                                        0 0;
-                animation: bg 1.2s cubic-bezier(0.19, 1, 0.22, 1) 1;
-                animation-fill-mode: forwards;
-                animation-delay: 1.4s;
-            }
-            .grid-wrapper-rightspace{
-                animation-delay: 0.8s;
-            }
-            //////////////////////////////////
-            .grid-wrapper-center{
-                margin: 0 12.4vh;
-                .grid-items-wrapper{
-                    justify-content: center;
-                    flex: 1;
-                    display: grid;
-                    grid-auto-rows: 8.5vh;
-                    grid-auto-columns: 8.5vh;
-                    grid-gap: 10px;
-                    transform-origin: center;
+    
+        .grid-wrapper-center{
+            .grid-items-wrapper{
+                display: grid;
+                grid-auto-rows: 8.5vh;
+                grid-auto-columns: 8.5vh;
+                grid-gap: 10px;
+                
+                .grid-item{
+                    overflow: hidden;
+                    background-repeat: no-repeat;
+                    background-image:   $animationborder,$animationborder,$animationborder,$animationborder;
+                    background-size:    100% 3px,
+                                        3px 100%,
+                                        100% 3px,
+                                        3px 100%;
                     
-                    .grid-item{
-                        overflow: hidden;
-                        font-family: 'Comfortaa';
-                        color:rgb(48, 48, 48);
+                }
+                .blog{
+                    grid-column: 1 / 3;
+                    grid-row: 1 / 5;
+                    //opacity: 0;
+                    
+                    background-position:    0 0,
+                                            100% 0,
+                                            0 100%,
+                                            0 0;
+                    //animation: bg 1.25s cubic-bezier(0.19, 1, 0.22, 1) 1;
+                    transition: background-size 0.8s ease;
+                    &:hover{
+                        background-size:    50% 3px,
+                                            3px 0%,
+                                            0 3px,
+                                            3px 25%;
                     }
-                    .blog{
-                        grid-column: 1 / 3;
-                        grid-row: 1 / 5;
-                        border: 3px solid $thirdcolor;
-                        background-size: cover;
-                        opacity: 0;
-                        transition: background-color 0.8s ease-in;
 
-                        .blog-items{
-                            pointer-events: none;
-                            .blog-title{
-                                transform-origin: center;
-                                transform:  translateY(16vh) rotateZ(-90deg);
-                                text-align: center;
-                                pointer-events: none;
-                                font-size: 1.5rem;
+                    .blog-items{
+                        height: 100%;
+                        width: 100%;
+                        background-image: url(../img/blog.png);
+                        background-size: 40%;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        rotate: -90deg;
 
-                            }
-                        }
-            
                     }
-                    .weather{
-                        grid-column: 3 / 7;
-                        grid-row: 1 / 3;
-                        border: 3px solid $thirdcolor;
-                        opacity: 0;
-                        transition: background-color 0.8s ease-in;
+        
+                }
+                .weather{
+                    grid-column: 3 / 7;
+                    grid-row: 1 / 3;
+                    //opacity: 0;
 
-                        .weather-items{
-                            pointer-events: none;
-                            .weather-title{
-                                text-align: center;
-                                transform: translateY(110%);
-                                pointer-events: none;
-                                font-size: 1.5rem;
-                            }
-                        }
+                    background-position:    100% 0,
+                                            100% 0,
+                                            100% 100%,
+                                            0 100%;
+                    //animation: bg 1.25s cubic-bezier(0.19, 1, 0.22, 1) 1;
+                    transition: background-size 0.8s ease;
+
+                    &:hover{
+                        background-size:    25% 3px,
+                        3px 50%,
+                        0 0,
+                        0 0;
                     }
-                    .tools{
-                        grid-column: 3 / 5;
-                        grid-row:  3 / 5;
-                        transform: rotateZ(-45deg);
-                        
-            
-                        .tools-items{
-                            .tools-title{
-                                text-align: center;
-                                font-family: 'Metal Mania';
-                                font-weight: 300;
-                                font-size: 3rem;
-                                position: relative;
-                                top: 20px;
-                                opacity: 0;
 
-                            }
-                            .by{
-                                font-weight: 300;
-                                font-family: 'Satisfy';
-                                text-align: center;
-                                font-size: 1rem;
-                                position: relative;
-                                top: 8px;
-                                opacity: 0;
-
-                            }
-                            .parvifolia{
-                                font-weight: 300;
-                                font-family: 'Satisfy';
-                                text-align: center;
-                                font-size: 1rem;
-                                position: relative;
-                                top: 8px;
-                                opacity: 0;
-
-                            }
-                        }
-                        
-                    }
-                    .chat{
-                        grid-column: 5 / 7;
-                        grid-row: 3 / 7;
-                        border: 3px solid $thirdcolor;
-                        opacity: 0;
-                        transition: background-color 0.8s ease-in;
-
-
-                        .chat-items{
-                            pointer-events: none;
-                            .chat-title{
-                                transform-origin: center;
-                                transform:  translateY(16vh) translateX(-5vh) rotateZ(-90deg);
-                                text-align: center;
-                                min-width: max-content;
-                                pointer-events: none;
-                                font-size: 1.5rem;
-
-                            }
-                        }
-                    }
-                    .todo{
-                        grid-column: 1 / 5;
-                        grid-row: 5 / 7;
-                        border: 3px solid $thirdcolor;   
-                        opacity: 0;
-                        transition: background-color 0.8s ease-in;
-
-         
-                        .todo-items{
-                            pointer-events: none;
-                            .todo-title{
-                                text-align: center;
-                                transform: translateY(110%);
-                                pointer-events: none;
-                                font-size: 1.5rem;
-
-                            }
-                        }
+                    .weather-items{
+                        height: 100%;
+                        width: 100%;
+                        background-image: url(../img/weather.png);
+                        background-size: 20%;
+                        background-repeat: no-repeat;
+                        background-position: center;
                     }
                 }
+                .chat{
+                    grid-column: 5 / 7;
+                    grid-row: 3 / 7;
+                    //opacity: 0;
+                    transition: background-size 0.8s ease;
+
+
+                    background-position:    100% 0,
+                                            100% 100%,
+                                            100% 100%,
+                                            0 100%;
+                    //animation: bg 1.25s cubic-bezier(0.19, 1, 0.22, 1) 1;
+                    &:hover{
+                        background-size:    0 3px,
+                                            3px 25%,
+                                            50% 3px,
+                                            3px 0;
+                    }
+
+                    .chat-items{
+                        height: 100%;
+                        width: 100%;
+                        background-image: url(../img/chat.png);
+                        background-size: 40%;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        rotate: -90deg;
+
+                    }
+                }
+                .todo{
+                    grid-column: 1 / 5;
+                    grid-row: 5 / 7;
+                    //opacity: 0;
+                    transition: background-size 0.8s ease;
+
+
+                    background-position:    100% 0,
+                                            100% 0,
+                                            0 100%,
+                                            0 100%;
+                    //animation: bg 1.25s cubic-bezier(0.19, 1, 0.22, 1) 1;
+                    &:hover{
+                        background-size:    0 0,
+                                            0 0,
+                                            25% 3px,
+                                            3px 50%;
+                    }
+        
+                    .todo-items{
+                        height: 100%;
+                        background-image: url(../img/todo.png);
+                        background-size: 20%;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                    }
+                }
+                .tools{
+                    grid-column: 3 / 5;
+                    grid-row:  3 / 5;
+                    transform: rotateZ(-45deg);
+                    background-image:none;
+                    
+                    .tools-items{
+                        .tools-title{
+                            text-align: center;
+                            font-family: 'Metal Mania';
+                            font-weight: 300;
+                            font-size: 3rem;
+                            position: relative;
+                            top: 20px;
+                            opacity: 0;
+
+                        }
+                        .by{
+                            font-weight: 300;
+                            font-family: 'Satisfy';
+                            text-align: center;
+                            font-size: 1rem;
+                            position: relative;
+                            top: 8px;
+                            opacity: 0;
+
+                        }
+                        .parvifolia{
+                            font-weight: 300;
+                            font-family: 'Satisfy';
+                            text-align: center;
+                            font-size: 1rem;
+                            position: relative;
+                            top: 8px;
+                            opacity: 0;
+
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+
+    .content-wrapper{
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+    
+        .topspace-items{
+            position: absolute;
+            top: 0;
+            right: 0;
+            text-align: right;
+            color: black;
+            h1{
+                font-size: 1.8rem;
+                letter-spacing: -2px;
+            }
+            h2{
+                font-size: 1.2rem;
+                margin: 3rem 0 0.5rem;
+                letter-spacing: -2px;
+            }
+            p{
+                font-size: 1rem;
+            }
+        }
+    
+        .bottomspace-items{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            text-align: left;
+            font-size: 2rem;
+            color: black;
+            h1{
+                font-size: 1.8rem;
+                letter-spacing: -2px;
+            }
+            h2{
+                font-size: 1.2rem;
+                margin: 3rem 0 0.5rem;
+                letter-spacing: -2px;
+            }
+            p{
+                font-size: 1rem;
+            }
+    
+        }
+    
+        .leftspace-items{
+            position: absolute;
+            top: 0;
+            left: 19.75vw;
+            text-align: center;
+            font-size: 2rem;
+            color: black;
+            h1{
+                font-size: 1.8rem;
+                letter-spacing: -2px;
+            }
+            h2{
+                font-size: 1.2rem;
+                margin: 1rem 0 0.5rem;
+                letter-spacing: -2px;
+            }
+            p{
+                font-size: 1.2rem;
+            }
+        }
+        .rightspace-items{
+            position: absolute;
+            bottom: 0;
+            right: 190px;
+            text-align: center;
+            font-size: 2rem;
+            color: black;
+            h1{
+                font-size: 1.8rem;
+                letter-spacing: -2px;
+                margin-top: 1rem;
+            }
+            h2{
+                font-size: 1.2rem;
+                margin-bottom: 0.5rem;
+                letter-spacing: -2px;
+            }
+            p{
+                font-size: 1rem;
+            }
+        }
+
+        .go-app{
+            margin: 0.8rem 0;
+            border: 3px solid transparent;                    
+            border-radius: 0.5rem;
+            color: black;
+            background: none;
+            font-size: 4vh;
+            padding: 0.4vh 0.2vh 0.5vh;
+            transition: border 0.8s ease;
+            text-align: center;
+            &:hover{
+                border: 3px solid $fourthcolor;                    
             }
         }
     }

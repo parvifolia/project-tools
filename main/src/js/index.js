@@ -14,44 +14,38 @@ const rightSpace = document.querySelector('.grid-wrapper-rightspace');
 
 // EVENT LISTENERS
 
-grid.addEventListener('click', e=>{
+// grid.addEventListener('click', e=>{
 
-    // first clear all active status
-    let items = [topSpace,bottomSpace,rightSpace,leftSpace,blog,weather,chat,todo]
-    items.forEach(item=>{
-        console.log(item.style.backgroundColor)
-        item.style.backgroundColor='transparent';
-        console.log(item.style.backgroundColor)
-    })
+//     // first clear all active status
+//     let items = [topSpace,bottomSpace,rightSpace,leftSpace,blog,weather,chat,todo]
+//     items.forEach(item=>{
+//         item.style.backgroundColor='transparent';
+//         item.style.color='#e2e2e2';
+//     })
 
-    if (e.target.classList.contains('blog')){
-        leftSpace.style.backgroundColor = 'rgb(' + 38 + ',' + 105 + ',' + 102 + ')';
-        blog.style.backgroundColor = 'rgb(' + 38 + ',' + 105 + ',' + 102 + ')';
-    } else if (e.target.classList.contains('weather')){
-        topSpace.style.backgroundColor = 'rgb(' + 38 + ',' + 105 + ',' + 102 + ')';
-        weather.style.backgroundColor = 'rgb(' + 38 + ',' + 105 + ',' + 102 + ')';
-    } else if (e.target.classList.contains('chat')){
-        rightSpace.style.backgroundColor = 'rgb(' + 38 + ',' + 105 + ',' + 102 + ')';
-        chat.style.backgroundColor = 'rgb(' + 38 + ',' + 105 + ',' + 102 + ')';
-    } else if (e.target.classList.contains('todo')){
-        bottomSpace.style.backgroundColor = 'rgb(' + 38 + ',' + 105 + ',' + 102 + ')';
-        todo.style.backgroundColor = 'rgb(' + 38 + ',' + 105 + ',' + 102 + ')';
-    };
-})
+//     if (e.target.classList.contains('blog')){
+//         leftSpace.children[0].style.visibility = 'visible';
+//         leftSpace.style.backgroundColor = 'rgb(' + 38 + ',' + 105 + ',' + 102 + ')';
+//         blog.style.color='white';
+//         blog.style.backgroundColor = 'rgb(' + 38 + ',' + 105 + ',' + 102 + ')';
+//     } else if (e.target.classList.contains('weather')){
+//         topSpace.children[0].style.visibility = 'visible';
+//         topSpace.style.backgroundColor = 'rgb(' + 38 + ',' + 105 + ',' + 102 + ')';
+//         weather.style.color='white';
+//         weather.style.backgroundColor = 'rgb(' + 38 + ',' + 105 + ',' + 102 + ')';
+//     } else if (e.target.classList.contains('chat')){
+//         rightSpace.children[0].style.visibility = 'visible';
+//         rightSpace.style.backgroundColor = 'rgb(' + 38 + ',' + 105 + ',' + 102 + ')';
+//         chat.style.color='white';
+//         chat.style.backgroundColor = 'rgb(' + 38 + ',' + 105 + ',' + 102 + ')';
+//     } else if (e.target.classList.contains('todo')){
+//         bottomSpace.children[0].style.visibility = 'visible';
+//         bottomSpace.style.backgroundColor = 'rgb(' + 38 + ',' + 105 + ',' + 102 + ')';
+//         todo.style.color='white';
+//         todo.style.backgroundColor = 'rgb(' + 38 + ',' + 105 + ',' + 102 + ')';
+//     };
+// })
 
-// blog.addEventListener('click', ()=>{
-//     leftSpace.style.backgroundColor = 'rgb(' + 38 + ',' + 105 + ',' + 102 + ')';
-//     blog.style.backgroundColor = 'rgb(' + 38 + ',' + 105 + ',' + 102 + ')';
-// });
-// weather.addEventListener('mouseover', ()=>{
-//     topSpace.style.opacity=1;
-// });
-// chat.addEventListener('mouseover', ()=>{
-//     rightSpace.style.opacity=1;
-// });
-// todo.addEventListener('mouseover', ()=>{
-//     bottomSpace.style.opacity=1;
-// });
 
 
 // GSAP
@@ -61,44 +55,32 @@ tl.to('.tools-title', {
     duration: 0.8,
     opacity:1,
 })
-tl.to('.grid-wrapper-topspace',{
-    x:0,
-    duration: 0.8,
-})
-tl.to('.grid-wrapper-bottomspace',{
-    duration: 0.8,
-    x:-0,
 
-},"-=0.8")
+// tl.to('.weather', {
+//     delay: 0.4,
+//     duration: 0.5,
+//     opacity:1,
+//     ease: Power1. easeIn,
+// })
 
+// tl.to('.chat', {
+//     duration: 0.5,
+//     opacity:1,
+//     ease: Power1. easeIn,
+// })
 
-tl.to('.weather', {
-    delay: 0.4,
-    duration: 0.5,
-    opacity:1,
-    ease: Power1. easeIn,
-})
-
-tl.to('.chat', {
-    duration: 0.5,
-    opacity:1,
-    ease: Power1. easeIn,
-})
-
-tl.to('.todo', {
-    duration: 0.5,
-    opacity:1,
-    ease: Power1. easeIn,
-})
+// tl.to('.todo', {
+//     duration: 0.5,
+//     opacity:1,
+//     ease: Power1. easeIn,
+// })
 
 
-tl.to('.blog', {
-    duration: 0.5,  
-    opacity:1,
-    ease: Power1. easeIn,
-})
-
-
+// tl.to('.blog', {
+//     duration: 0.5,  
+//     opacity:1,
+//     ease: Power1. easeIn,
+// })
 
 
 tl.to('.by', {
