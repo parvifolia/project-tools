@@ -7,44 +7,76 @@ const blog = document.querySelector('.blog');
 const weather = document.querySelector('.weather');
 const chat = document.querySelector('.chat');
 const todo = document.querySelector('.todo');
-const topSpace = document.querySelector('.grid-wrapper-topspace');
-const bottomSpace = document.querySelector('.grid-wrapper-bottomspace');
-const leftSpace = document.querySelector('.grid-wrapper-leftspace');
-const rightSpace = document.querySelector('.grid-wrapper-rightspace');
+const toolsTitle = document.querySelector('.tools-title')
 
-// EVENT LISTENERS
+const blogContents = document.querySelector('.blog-contents')
 
-// grid.addEventListener('click', e=>{
+// // EVENT LISTENERS
 
-//     // first clear all active status
-//     let items = [topSpace,bottomSpace,rightSpace,leftSpace,blog,weather,chat,todo]
-//     items.forEach(item=>{
-//         item.style.backgroundColor='transparent';
-//         item.style.color='#e2e2e2';
-//     })
+grid.addEventListener('click', e=>{
 
-//     if (e.target.classList.contains('blog')){
-//         leftSpace.children[0].style.visibility = 'visible';
-//         leftSpace.style.backgroundColor = 'rgb(' + 38 + ',' + 105 + ',' + 102 + ')';
-//         blog.style.color='white';
-//         blog.style.backgroundColor = 'rgb(' + 38 + ',' + 105 + ',' + 102 + ')';
-//     } else if (e.target.classList.contains('weather')){
-//         topSpace.children[0].style.visibility = 'visible';
-//         topSpace.style.backgroundColor = 'rgb(' + 38 + ',' + 105 + ',' + 102 + ')';
-//         weather.style.color='white';
-//         weather.style.backgroundColor = 'rgb(' + 38 + ',' + 105 + ',' + 102 + ')';
-//     } else if (e.target.classList.contains('chat')){
-//         rightSpace.children[0].style.visibility = 'visible';
-//         rightSpace.style.backgroundColor = 'rgb(' + 38 + ',' + 105 + ',' + 102 + ')';
-//         chat.style.color='white';
-//         chat.style.backgroundColor = 'rgb(' + 38 + ',' + 105 + ',' + 102 + ')';
-//     } else if (e.target.classList.contains('todo')){
-//         bottomSpace.children[0].style.visibility = 'visible';
-//         bottomSpace.style.backgroundColor = 'rgb(' + 38 + ',' + 105 + ',' + 102 + ')';
-//         todo.style.color='white';
-//         todo.style.backgroundColor = 'rgb(' + 38 + ',' + 105 + ',' + 102 + ')';
-//     };
-// })
+    if (e.target.classList.contains('blog')){
+
+
+        blog.children[0].style.transform='rotate(45deg) scale(1.5) translateY(-5vh)';
+
+        blog.style.backgroundSize = '50% 3px, 3px 0%, 0 3px, 3px 25% ';
+
+        weather.style.opacity=0;
+        chat.style.opacity=0;
+        todo.style.opacity=0;
+        toolsTitle.innerText="BLOG"
+        toolsTitle.style.fontSize='5vh';
+
+        blogContents.style.display='flex';
+
+        // Arrow Animation
+        let blogTl = gsap.timeline({repeat: 100, repeatDelay: 0, yoyo : true})
+        blogTl.to(".blog", {y:10,x:10,ease:Power1,duration:1.4})
+        let blogTl2 = gsap.timeline({repeat: 100, repeatDelay: 0, yoyo : true})
+        blogTl2.to(".blog-icon", {x:-10,ease:Power1,duration:1.4})
+
+
+    } else if (e.target.classList.contains('weather')){
+
+        weather.children[0].style.transform='rotate(-45deg) scale(1.5) translateY(5vh)';
+
+        weather.style.backgroundSize = '25% 3px, 3px 50%, 0 0, 0 0 ';
+
+        blog.style.opacity=0;
+        chat.style.opacity=0;
+        todo.style.opacity=0;
+        toolsTitle.innerText="WEATHER";
+        toolsTitle.style.fontSize='5vh';
+
+        
+
+    } else if (e.target.classList.contains('chat')){
+
+        chat.children[0].style.transform='rotate(45deg) scale(1.5) translateY(5vh)';
+
+        chat.style.backgroundSize = '0 0, 3px 25%, 50% 3px, 0 0 ';
+
+        blog.style.opacity=0;
+        weather.style.opacity=0;
+        todo.style.opacity=0;
+        toolsTitle.innerText="LIVE CHAT";
+        toolsTitle.style.fontSize='5vh';
+        toolsTitle.style.width='max-content';
+
+    } else if (e.target.classList.contains('todo')){
+
+        todo.children[0].style.transform='rotate(-45deg) scale(1.5) translateY(-5vh)';
+
+        todo.style.backgroundSize = '0 0, 0 0, 25% 3px, 3px 50% ';
+
+        blog.style.opacity=0;
+        weather.style.opacity=0;
+        chat.style.opacity=0;
+        toolsTitle.innerText="TO DO";
+        toolsTitle.style.fontSize='5vh';
+    };
+})
 
 
 
@@ -56,31 +88,30 @@ tl.to('.tools-title', {
     opacity:1,
 })
 
-// tl.to('.weather', {
-//     delay: 0.4,
-//     duration: 0.5,
-//     opacity:1,
-//     ease: Power1. easeIn,
-// })
+tl.to('.weather', {
+    duration: 0.5,
+    opacity:1,
+    ease: Power1. easeIn,
+})
 
-// tl.to('.chat', {
-//     duration: 0.5,
-//     opacity:1,
-//     ease: Power1. easeIn,
-// })
+tl.to('.chat', {
+    duration: 0.5,
+    opacity:1,
+    ease: Power1. easeIn,
+})
 
-// tl.to('.todo', {
-//     duration: 0.5,
-//     opacity:1,
-//     ease: Power1. easeIn,
-// })
+tl.to('.todo', {
+    duration: 0.5,
+    opacity:1,
+    ease: Power1. easeIn,
+})
 
 
-// tl.to('.blog', {
-//     duration: 0.5,  
-//     opacity:1,
-//     ease: Power1. easeIn,
-// })
+tl.to('.blog', {
+    duration: 0.5,  
+    opacity:1,
+    ease: Power1. easeIn,
+})
 
 
 tl.to('.by', {
