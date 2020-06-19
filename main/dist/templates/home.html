@@ -16,7 +16,7 @@
 
         <div class="grid-item weather">
           <div class="weather-items">
-            <img src="{% static 'img/weather.png'%}" alt="weather">
+            <img class="weather-icon" src="{% static 'img/weather.png'%}" alt="weather">
           </div>
         </div>
 
@@ -30,13 +30,13 @@
 
         <div class="grid-item chat">
           <div class="chat-items">
-            <img src="{% static 'img/chat.png'%}" alt="chat">
+            <img class="chat-icon" src="{% static 'img/chat.png'%}" alt="chat">
           </div>
         </div>
 
         <div class="grid-item todo">
           <div class="todo-items">
-            <img src="{% static 'img/todo.png'%}" alt="todo">
+            <img class="todo-icon" src="{% static 'img/todo.png'%}" alt="todo">
           </div>
         </div>
   
@@ -44,38 +44,45 @@
     </div>
   </div>
   <div class="content-wrapper">
+    <div class="back-arrow">
+      <img src="{% static 'img/back.png'%}" alt="back">
+    </div>
     <div class="blog-contents">
       <h1>more than a daily routine!</h1>
       <h2>Used techniques</h2>
-      <p>Django Back-End</p>
-      <p>Login-Auth System</p>
-      <p>Bootstrap</p>
+      <h3>Django Back-End</h3>
+      <h3>Login-Auth System</h3>
+      <h3>Bootstrap</h3>
       <p class='go-app'>Go<br>App</p>
+      <img class='blog-go' src="{% static 'img/back.png'%}" alt="back">
     </div>
-    <!-- <div class="weather-contents">
-      <h1>a stylish weather app</h1>
+    <div class="weather-contents">
+      <h1>a stylish weather app!</h1>
       <h2>Used tecniques</h2>
-      <p>Async JS</p>
-      <p>Fetch API</p>
-      <p>JSON Data</p>
-      <input class="go-app" type="button" value="Go App">
+      <h3>Async JS</h3>
+      <h3>Fetch API</h3>
+      <h3>JSON Data</h3>
+      <p class='go-app'>Go<br>App</p>
+      <img class='weather-go' src="{% static 'img/back.png'%}" alt="back">
     </div>
     <div class="chat-contents">
-      <input class="go-app" type="button" value="Go App">
-      <h2>Used tecniques</h2>
-      <p>DOM Manipulation</p>
-      <p>Local Storage</p>
-      <p>Object Literals</p>
       <h1>a messenger to get together</h1>
+      <h2>Used tecniques</h2>
+      <h3>DOM Manipulation</h3>
+      <h3>Local Storage</h3>
+      <h3>Object Literals</h3>
+      <p class='go-app'>Go<br>App</p>
+      <img class='chat-go' src="{% static 'img/back.png'%}" alt="back">
     </div>
     <div class="todo-contents">
-      <input class="go-app" type="button" value="Go App">
-      <h2>Used tecniques</h2>
-      <p>DOM Manipulation</p>
-      <p>Local Storage</p>
-      <p>Object Literals</p>
       <h1>a todo list for organized life</h1>
-    </div> -->
+      <h2>Used tecniques</h2>
+      <h3>DOM Manipulation</h3>
+      <h3>Local Storage</h3>
+      <h3>Object Literals</h3>
+      <p class='go-app'>Go<br>App</p>
+      <img class='todo-go' src="{% static 'img/back.png'%}" alt="back">
+    </div>
   </div>
 </div>
 
