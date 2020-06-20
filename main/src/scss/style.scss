@@ -13,13 +13,14 @@ $thirdcolor: #e2e2e2;
 $animationborder :linear-gradient(to right, rgb(38, 105, 102) 100%, rgb(38, 105, 102) 100%);
 
 
+
 .background-wrapper{
     background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
     font-family: 'Comfortaa';
     height: 100%;
     width: 100%;
     overflow: hidden;
-
+    
     .grid-wrapper{
         height: 100%;
         display: flex;
@@ -211,7 +212,6 @@ $animationborder :linear-gradient(to right, rgb(38, 105, 102) 100%, rgb(38, 105,
                             font-family: 'Satisfy';
                             text-align: center;
                             font-size: 2.2vh;
-                            //margin-top: -1vh;
                             opacity: 0;
 
                         }
@@ -227,30 +227,8 @@ $animationborder :linear-gradient(to right, rgb(38, 105, 102) 100%, rgb(38, 105,
                     
                 }
             }
-            @media screen and (max-width:576px){
-                .grid-items-wrapper{
-                    grid-auto-rows: 5vh;
-                    grid-auto-columns: 5vh;
-                    .tools{
-                        .tools-items{
-                            .tools-title{
-                                margin-top: 0.5vh;
-                                font-size: 6vh;
-                            }
-                            .by{
-                                font-size: 1.8vh;
-                            }
-                            .parvifolia{
-                                font-size: 1.6vh;
-                            }
-    
-                        }
-                    }
-
-                }
-            
-            }
         }
+
     }
 
     .content-wrapper{
@@ -275,6 +253,7 @@ $animationborder :linear-gradient(to right, rgb(38, 105, 102) 100%, rgb(38, 105,
             display: none;
             flex-direction: column;
             justify-content: flex-end;
+            text-align: center;
             align-items: center;
             color: $firstcolor;
 
@@ -346,6 +325,7 @@ $animationborder :linear-gradient(to right, rgb(38, 105, 102) 100%, rgb(38, 105,
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
+            text-align: center;
             color: $firstcolor;
             padding-top: 10vh;
 
@@ -400,6 +380,7 @@ $animationborder :linear-gradient(to right, rgb(38, 105, 102) 100%, rgb(38, 105,
                 font-size: 2vh;
                 position: absolute;
                 right:calc(10px + 30vh + 50vw);
+
             }
             .todo-go{
                 position: absolute;
@@ -411,41 +392,116 @@ $animationborder :linear-gradient(to right, rgb(38, 105, 102) 100%, rgb(38, 105,
     }
 }
 
-// MOBILE
+@media screen and (max-width:576px){
+    .background-wrapper{
+        .grid-wrapper{
+            .grid-wrapper-center{
+                padding-top: 8vh;
+                padding-left: 8vh;
+                .grid-items-wrapper{
+                    grid-auto-rows: 4.5vh;
+                    grid-auto-columns: 4.5vh;
+                    .tools{
+                        .tools-items{
+                            .tools-title{
+                                margin-top: 0.5vh;
+                                font-size: 5vh;
+                            }
+                            .by{
+                                font-size: 1.8vh;
+                                margin-top: -0.3vh;
+                            }
+                            .parvifolia{
+                                font-size: 1.6vh;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .content-wrapper{
+            .back-arrow{
+                position: absolute;
+                top: 10vh;
+                left: 5vw;
+                img{
+                    height: 14vw;
+                }
+            }
+            .blog-contents{
+                height: 100vh;
+                width: 100vw;
+                padding-bottom: 10vh;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: center;
+                h1{
+                    font-size: 6vw;
+                }
+                h2{
+                    margin: 4vh 0 2vh;
+                    font-size: 4vw;
+                    border-bottom: 3px solid $secondcolor;
+                }
+                h3{
+                    font-size: 3vw;
+                }
+    
+                .go-app{
+                    font-size: 2vh;
+                    position: absolute;
+                    top: 14vh;
+                    text-align: center;
+    
+                }
+                .blog-go{
+                    transform: rotate(90deg);
+                    position: absolute;
+                    top: 5.2vh;
+                    height: 13.5vh;
+                }
+            }
+            
+            .chat-contents,.weather-contents,.todo-contents{
+                height: 100vh;
+                width: 100vw;
+                justify-content: flex-start;
+                align-items: center;
+                padding: 20vh 0 0 0;
+    
+                h1{
+                    font-size: 6vw;
+                    width: 60%;
+                }
+                h2{
+                    margin: 4vh 0 2vh;
+                    font-size: 4vw;
+                    border-bottom: 3px solid $secondcolor;
+                }
+                h3{
+                    font-size: 3vw;
+                }
+    
+                .go-app{
+                    text-align: center;
+                    font-size: 2vh;
+                    position: absolute;
+                    bottom: 14vh;
+                    left:auto;
+                    right: auto;
 
 
-
-// Border animation
-@keyframes bg {
-
-    0% {
-        background-size:    0 3px,
-                            3px 0,
-                            0 3px,
-                            3px 0;
-    }
-    25% {
-        background-size:    100% 3px,
-                            3px 0,
-                            0 3px,
-                            3px 0;
-    }
-    50% {
-        background-size:    100% 3px,
-                            3px 100%,
-                            0 3px,
-                            3px 0;
-    }
-    75% {
-        background-size:    100% 3px,
-                            3px 100%,
-                            100% 3px,
-                            3px 0;
-    }
-    100% {
-        background-size:    100% 3px,
-                            3px 100%,
-                            100% 3px,
-                            3px 100%;
+                }
+                .chat-go,.weather-go,.todo-go{
+                    transform: rotate(270deg);
+                    height: 13.5vh;
+                    position: absolute;
+                    bottom: 5.4vh;
+                    width: auto;
+                    left:auto;
+                    right: auto;
+                }
+            }
+        }
     }
 }
