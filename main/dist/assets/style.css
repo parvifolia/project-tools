@@ -10,8 +10,8 @@
 .background-wrapper {
   background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
   font-family: 'Comfortaa';
-  height: 100%;
-  width: 100%;
+  height: 100vw;
+  width: 100vh;
   overflow: hidden;
 }
 
