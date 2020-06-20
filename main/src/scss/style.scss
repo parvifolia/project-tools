@@ -39,6 +39,8 @@ $animationborder :linear-gradient(to right, rgb(38, 105, 102) 100%, rgb(38, 105,
                 grid-gap: 10px;
                 
                 .grid-item{
+                    height: 100%;
+                    width: 100%;
                     cursor: pointer;
                     background-repeat: no-repeat;
                     background-image:   $animationborder,$animationborder,$animationborder,$animationborder;
@@ -429,8 +431,8 @@ $animationborder :linear-gradient(to right, rgb(38, 105, 102) 100%, rgb(38, 105,
                 }
             }
             .blog-contents{
-                height: 100vh;
-                width: 100vw;
+                height: 100%;
+                width: 100%;
                 padding-bottom: 10vh;
                 flex-direction: column;
                 justify-content: flex-end;

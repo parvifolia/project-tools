@@ -42,6 +42,8 @@
 }
 
 .background-wrapper .grid-wrapper .grid-wrapper-center .grid-items-wrapper .grid-item {
+  height: 100%;
+  width: 100%;
   cursor: pointer;
   background-repeat: no-repeat;
   background-image: -webkit-gradient(linear, left top, right top, color-stop(100%, #266966), to(#266966)), -webkit-gradient(linear, left top, right top, color-stop(100%, #266966), to(#266966)), -webkit-gradient(linear, left top, right top, color-stop(100%, #266966), to(#266966)), -webkit-gradient(linear, left top, right top, color-stop(100%, #266966), to(#266966));
@@ -512,8 +514,8 @@
     height: 14vw;
   }
   .background-wrapper .content-wrapper .blog-contents {
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     padding-bottom: 10vh;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
