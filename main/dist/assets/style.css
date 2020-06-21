@@ -334,11 +334,14 @@
 }
 
 .background-wrapper .content-wrapper .blog-contents .blog-go {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
   position: absolute;
   top: 5.2vh;
+}
+
+.background-wrapper .content-wrapper .blog-contents .blog-go img {
   height: 13.5vh;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 .background-wrapper .content-wrapper .weather-contents {
@@ -383,11 +386,14 @@
 }
 
 .background-wrapper .content-wrapper .weather-contents .weather-go {
+  position: absolute;
+  left: calc(10px + 30vh + 49.85vw);
+}
+
+.background-wrapper .content-wrapper .weather-contents .weather-go img {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
-  position: absolute;
   width: 13.5vh;
-  left: calc(10px + 30vh + 49.85vw);
 }
 
 .background-wrapper .content-wrapper .chat-contents {
@@ -431,11 +437,14 @@
 }
 
 .background-wrapper .content-wrapper .chat-contents .chat-go {
-  -webkit-transform: rotate(270deg);
-          transform: rotate(270deg);
-  height: 13.5vh;
   position: absolute;
   bottom: 5.4vh;
+}
+
+.background-wrapper .content-wrapper .chat-contents .chat-go img {
+  height: 13.5vh;
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
 }
 
 .background-wrapper .content-wrapper .todo-contents {
@@ -479,8 +488,11 @@
 
 .background-wrapper .content-wrapper .todo-contents .todo-go {
   position: absolute;
-  width: 13.5vh;
   right: calc(10px + 30vh + 49.85vw);
+}
+
+.background-wrapper .content-wrapper .todo-contents .todo-go img {
+  width: 13.5vh;
 }
 
 @media screen and (max-width: 576px) {
@@ -550,14 +562,16 @@
     right: auto;
   }
   .background-wrapper .content-wrapper .blog-contents .blog-go, .background-wrapper .content-wrapper .blog-contents .weather-go, .background-wrapper .content-wrapper .weather-contents .blog-go, .background-wrapper .content-wrapper .weather-contents .weather-go {
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
     position: absolute;
     top: 5.2vh;
-    height: 13.5vh;
     width: auto;
     left: auto;
     right: auto;
+  }
+  .background-wrapper .content-wrapper .blog-contents .blog-go img, .background-wrapper .content-wrapper .blog-contents .weather-go img, .background-wrapper .content-wrapper .weather-contents .blog-go img, .background-wrapper .content-wrapper .weather-contents .weather-go img {
+    height: 13.5vh;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
   }
   .background-wrapper .content-wrapper .chat-contents, .background-wrapper .content-wrapper .todo-contents {
     height: 90vh;
@@ -591,13 +605,188 @@
     right: auto;
   }
   .background-wrapper .content-wrapper .chat-contents .chat-go, .background-wrapper .content-wrapper .chat-contents .todo-go, .background-wrapper .content-wrapper .todo-contents .chat-go, .background-wrapper .content-wrapper .todo-contents .todo-go {
-    -webkit-transform: rotate(270deg);
-            transform: rotate(270deg);
-    height: 13.5vh;
     position: absolute;
     bottom: 0;
     width: auto;
     left: auto;
     right: auto;
   }
+  .background-wrapper .content-wrapper .chat-contents .chat-go img, .background-wrapper .content-wrapper .chat-contents .todo-go img, .background-wrapper .content-wrapper .todo-contents .chat-go img, .background-wrapper .content-wrapper .todo-contents .todo-go img {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+    height: 13.5vh;
+  }
+}
+
+.todo-background {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#a18cd1), to(#fbc2eb));
+  background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+  color: white;
+  font-family: "Poppins";
+  min-height: 100vh;
+}
+
+.todo-background .todo-header, .todo-background .todo-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 20vh;
+}
+
+.todo-background .todo-form button {
+  padding: 0.5rem;
+  border: none;
+  background: white;
+  font-size: 2rem;
+}
+
+.todo-background .todo-form input {
+  padding: 0.3rem;
+  border: none;
+  background: white;
+  font-size: 2rem;
+}
+
+.todo-background .todo-form button {
+  color: #53a8a8;
+  background: white;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.todo-background .todo-form button:hover {
+  background: #53a8a8;
+  color: white;
+}
+
+.todo-background .todo-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.todo-background .todo-list {
+  min-width: 30%;
+  list-style: none;
+}
+
+.todo-background .todo {
+  margin: 0.5rem;
+  background: white;
+  color: black;
+  font-size: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.todo-background .todo li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.todo-background .trash-btn, .todo-background .complete-btn {
+  background: #c2354a;
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.todo-background .fa-check, .todo-background .fa-trash {
+  pointer-events: none;
+}
+
+.todo-background .complete-btn {
+  background: lightgreen;
+}
+
+.todo-background .todo-item {
+  padding: 0 0.5rem;
+}
+
+.todo-background .completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.chat-background {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#a8edea), to(#fed6e3));
+  background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+  min-height: 100vh;
+}
+
+.chat-background .container {
+  max-width: 600px;
+}
+
+.chat-background .btn {
+  background: #43d9be;
+  color: white;
+  outline: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+.chat-background .btn:focus {
+  outline: none !important;
+}
+
+.chat-background .username {
+  font-weight: bold;
+}
+
+.chat-background .time {
+  font-size: 0.7em;
+  color: darkgray;
+}
+
+.weather-background {
+  min-height: 100vh;
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  letter-spacing: 0.2em;
+  font-size: 0.8em;
+}
+
+.weather-background .container {
+  max-width: 400px;
+  max-height: 200px;
+}
+
+.weather-background .time {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 400px;
+  max-height: 300px;
+}
+
+.weather-background .icon {
+  margin-top: 10px;
+  border-radius: 50%;
+  width: 100px;
+}
+
+.weather-background .body {
+  background-repeat: none;
 }

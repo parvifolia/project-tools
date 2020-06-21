@@ -1,6 +1,5 @@
 const hello = "Merhaba Pıncır";
 
-
 // SELECTORS
 const grid = document.querySelector('.grid-items-wrapper');
 const blog = document.querySelector('.blog');
@@ -58,7 +57,7 @@ grid.addEventListener('click', e=>{
 
         // icon rotation
         if (window.innerWidth < 576) {
-            blog.children[0].style.transform='rotate(45deg) scale(1.5) translateY(-3vh)';
+            blog.children[0].style.transform='rotate(45deg) scale(1.5) translateY(-3vh) translateX(-1vh)';
         } else {
             blog.children[0].style.transform='rotate(45deg) scale(1.5) translateY(-5vh)';
         }
@@ -89,7 +88,7 @@ grid.addEventListener('click', e=>{
         gsap.from('.back-arrow',{x:-200,duration:0.6})
 
         if (window.innerWidth < 576) {
-            weather.children[0].style.transform='rotate(-45deg) scale(1.5) translateY(-5vh) translateX(-8vh)';
+            weather.children[0].style.transform='rotate(-45deg) scale(1.5) translateY(-6vh) translateX(-8.2vh)';
         } else {
             weather.children[0].style.transform='rotate(-45deg) scale(1.5) translateY(5vh)';
         }
@@ -122,7 +121,7 @@ grid.addEventListener('click', e=>{
         gsap.from('.back-arrow',{x:-200})
 
         if (window.innerWidth < 576) {
-            chat.children[0].style.transform='rotate(45deg) scale(1.5) translateY(5.5vw)';
+            chat.children[0].style.transform='rotate(45deg) scale(1.5) translateY(5vw) translateX(-1vh)';
         } else {
             chat.children[0].style.transform='rotate(45deg) scale(1.5) translateY(5vh)';
         }
@@ -151,7 +150,7 @@ grid.addEventListener('click', e=>{
         gsap.from('.back-arrow',{x:-200})
 
         if (window.innerWidth < 576) {
-            todo.children[0].style.transform='rotate(-45deg) scale(1.5) translateY(-6vw)';
+            todo.children[0].style.transform='rotate(-45deg) scale(1.5) translateY(4vh) translateX(8.5vh)';
         } else {
             todo.children[0].style.transform='rotate(-45deg) scale(1.5) translateY(-5vh)';
         }

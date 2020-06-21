@@ -21,6 +21,9 @@ from main import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path ('', views.home_view, name= "home"),
+    path ('todo/', views.todo_view, name= "todo"),
+    path ('chat/', views.chat_view, name= "chat"),
+    path ('weather/', views.weather_view, name= "weather"),
 ]
 
 handler404 = 'main.views.page404'
