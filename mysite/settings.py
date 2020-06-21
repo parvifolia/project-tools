@@ -23,7 +23,9 @@ SECRET_KEY = '(mn62-n5sngy8guhs7#6io^+27b(xly(%b2d_$e8zgi^mp6513'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['.herokuapp.com','.pythonanywhere.com','127.0.0.1']
+
+
 
 
 # Application definition
@@ -36,7 +38,28 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main',
-]
+    'blog',
+    'accounts',
+    #third party apps:
+    'crispy_forms',
+    'ckeditor',
+    'captcha',
+    ]
+
+
+RECAPTCHA_PUBLIC_KEY = '6Leg9OwUAAAAAKpILcZMgPbj4oY0VCxy2iXfE51h'
+RECAPTCHA_PRIVATE_KEY = '6Leg9OwUAAAAAERmQtFoAl1BTukzUZxn1m5apGT1'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+CKEDITOR_BASEPATH = "/static/ckeditor/ckeditor/"
+CKEDITOR_CONFIGS = {
+    'default': {
+        #'toolbar': 'full',
+        #'height': 300,
+        'width': '110%',
+    },
+}
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

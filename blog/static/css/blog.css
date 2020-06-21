@@ -1,0 +1,23 @@
+body {
+    background-color: rgb(74, 141, 141)
+}
+
+h2 a{ 
+    color: white;
+}
+
+h6 {
+    color: white;
+}
+
+
+.navbar {
+    background-color: white!important
+}
+
+hr{ 
+    height: 1px;
+    color:wheat;
+    background-color:wheat;
+    border: none;
+  }

@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path,include
 from django.conf.urls import handler404
 from main import views
 
@@ -24,6 +24,8 @@ urlpatterns = [
     path ('todo/', views.todo_view, name= "todo"),
     path ('chat/', views.chat_view, name= "chat"),
     path ('weather/', views.weather_view, name= "weather"),
+    path('', include('blog.urls')),
+    path('', include('accounts.urls')),
 ]
 
 handler404 = 'main.views.page404'
