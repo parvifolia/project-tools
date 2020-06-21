@@ -236,7 +236,6 @@ $animationborder :linear-gradient(to right, rgb(38, 105, 102) 100%, rgb(38, 105,
     .content-wrapper{
         position: absolute;
         top: 0;
-        font-family: 'Comfortaa';
 
         .back-arrow{
             display: none;
@@ -244,14 +243,13 @@ $animationborder :linear-gradient(to right, rgb(38, 105, 102) 100%, rgb(38, 105,
             top: 10vh;
             left: 5vw;
             img{
-                height: 11vh;
+                height: 7vh;
                 cursor: pointer;
             }
         }
         .blog-contents{
-            height: 100vh;
+            height: 90vh;
             width: 100vw;
-            padding-bottom: 10vh;
             display: none;
             flex-direction: column;
             justify-content: flex-end;
@@ -433,7 +431,6 @@ $animationborder :linear-gradient(to right, rgb(38, 105, 102) 100%, rgb(38, 105,
                 }
             }
             .blog-contents{
-                padding-bottom: 10vh;
                 flex-direction: column;
                 justify-content: flex-end;
                 align-items: center;
@@ -465,7 +462,7 @@ $animationborder :linear-gradient(to right, rgb(38, 105, 102) 100%, rgb(38, 105,
             }
             
             .chat-contents,.weather-contents,.todo-contents{
-                height: 100vh;
+                height: 90vh;
                 width: 100vw;
                 justify-content: flex-start;
                 align-items: center;
@@ -488,7 +485,7 @@ $animationborder :linear-gradient(to right, rgb(38, 105, 102) 100%, rgb(38, 105,
                     text-align: center;
                     font-size: 2vh;
                     position: absolute;
-                    bottom: 14vh;
+                    bottom: 9vh;
                     left:auto;
                     right: auto;
 
@@ -498,7 +495,7 @@ $animationborder :linear-gradient(to right, rgb(38, 105, 102) 100%, rgb(38, 105,
                     transform: rotate(270deg);
                     height: 13.5vh;
                     position: absolute;
-                    bottom: 5.4vh;
+                    bottom: 0;
                     width: auto;
                     left:auto;
                     right: auto;

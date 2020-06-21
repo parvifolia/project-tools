@@ -280,7 +280,6 @@
 .background-wrapper .content-wrapper {
   position: absolute;
   top: 0;
-  font-family: 'Comfortaa';
 }
 
 .background-wrapper .content-wrapper .back-arrow {
@@ -291,14 +290,13 @@
 }
 
 .background-wrapper .content-wrapper .back-arrow img {
-  height: 11vh;
+  height: 7vh;
   cursor: pointer;
 }
 
 .background-wrapper .content-wrapper .blog-contents {
-  height: 100vh;
+  height: 90vh;
   width: 100vw;
-  padding-bottom: 10vh;
   display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -518,7 +516,6 @@
     height: 14vw;
   }
   .background-wrapper .content-wrapper .blog-contents {
-    padding-bottom: 10vh;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -555,7 +552,7 @@
     height: 13.5vh;
   }
   .background-wrapper .content-wrapper .chat-contents, .background-wrapper .content-wrapper .weather-contents, .background-wrapper .content-wrapper .todo-contents {
-    height: 100vh;
+    height: 90vh;
     width: 100vw;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
@@ -581,7 +578,7 @@
     text-align: center;
     font-size: 2vh;
     position: absolute;
-    bottom: 14vh;
+    bottom: 9vh;
     left: auto;
     right: auto;
   }
@@ -590,7 +587,7 @@
             transform: rotate(270deg);
     height: 13.5vh;
     position: absolute;
-    bottom: 5.4vh;
+    bottom: 0;
     width: auto;
     left: auto;
     right: auto;
