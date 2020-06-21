@@ -89,7 +89,7 @@ grid.addEventListener('click', e=>{
         gsap.from('.back-arrow',{x:-200,duration:0.6})
 
         if (window.innerWidth < 576) {
-            weather.children[0].style.transform='rotate(-45deg) scale(1.5) translateY(4vw)';
+            weather.children[0].style.transform='rotate(-45deg) scale(1.5) translateY(-5vh) translateX(-8vh)';
         } else {
             weather.children[0].style.transform='rotate(-45deg) scale(1.5) translateY(5vh)';
         }

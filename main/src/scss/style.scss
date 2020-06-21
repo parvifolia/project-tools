@@ -427,13 +427,17 @@ $animationborder :linear-gradient(to right, rgb(38, 105, 102) 100%, rgb(38, 105,
                 top: 10vh;
                 left: 5vw;
                 img{
-                    height: 14vw;
+                    height: 10vw;
                 }
             }
-            .blog-contents{
+            .blog-contents,.weather-contents{
+                height: 80vh;
+                width: 100vw;
                 flex-direction: column;
                 justify-content: flex-end;
                 align-items: center;
+                padding-left: 0;
+
                 h1{
                     font-size: 6vw;
                 }
@@ -451,17 +455,22 @@ $animationborder :linear-gradient(to right, rgb(38, 105, 102) 100%, rgb(38, 105,
                     position: absolute;
                     top: 14vh;
                     text-align: center;
+                    left:auto;
+                    right: auto;
     
                 }
-                .blog-go{
+                .blog-go,.weather-go{
                     transform: rotate(90deg);
                     position: absolute;
                     top: 5.2vh;
                     height: 13.5vh;
+                    width: auto;
+                    left:auto;
+                    right: auto;
                 }
             }
             
-            .chat-contents,.weather-contents,.todo-contents{
+            .chat-contents,.todo-contents{
                 height: 90vh;
                 width: 100vw;
                 justify-content: flex-start;
@@ -491,7 +500,7 @@ $animationborder :linear-gradient(to right, rgb(38, 105, 102) 100%, rgb(38, 105,
 
 
                 }
-                .chat-go,.weather-go,.todo-go{
+                .chat-go,.todo-go{
                     transform: rotate(270deg);
                     height: 13.5vh;
                     position: absolute;
