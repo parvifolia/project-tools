@@ -1,16 +1,23 @@
-{% extends 'index.html' %}
+{% extends 'base.html' %}
 {% load static %}
+
+{% block head  %}
+
+<title>Real Time Chat | Parvifolia</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
+  integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  
+{% endblock %}
 
 {% block content %}
 
 
 <div class="chat-background">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
-  integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  
 
   <!-- container & title -->
   <div class="container">
-    <h1 class="py-4 text-center">Kasmayan MSN</h1>
+    <h1 class="py-4 text-center chat-title">Kasmayan MSN</h1>
     <!-- buttons for chatrooms -->
     <div class="chat-rooms mb-3 text-center">
       <div class="my-2">Hangi ortama girelim?</div>

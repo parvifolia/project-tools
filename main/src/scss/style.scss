@@ -539,14 +539,18 @@ $animationborder :linear-gradient(to right, rgb(38, 105, 102) 100%, rgb(38, 105,
     min-height: 100vh;
 
     .todo-header,.todo-form {
+        padding-top: 20vh;
         display: flex;
         justify-content: center;
         align-items: center;
         min-height: 20vh;
     }
+    .todo-form{
+        padding-top: 7vh;
+    }
     
     .todo-form button  {
-        padding: 0.5rem;
+        padding: 0.45rem;
         border: none;
         background: white;
         font-size: 2rem;
@@ -615,6 +619,16 @@ $animationborder :linear-gradient(to right, rgb(38, 105, 102) 100%, rgb(38, 105,
     }
 }
 
+@media screen and (max-width:576px){
+    .todo-background{
+        
+        .todo-form input {
+            width: 80%;
+        }
+    }
+
+}
+
 // CHAT APP
 
 .chat-background{
@@ -643,6 +657,16 @@ $animationborder :linear-gradient(to right, rgb(38, 105, 102) 100%, rgb(38, 105,
     }
 }
 
+@media screen and (max-width:576px){
+    .chat-background{
+        .chat-title{
+            padding-top: 20vh!important;
+        }
+
+    }
+
+}
+
 // WEATHER APP
 
 .weather-background{
@@ -667,5 +691,13 @@ $animationborder :linear-gradient(to right, rgb(38, 105, 102) 100%, rgb(38, 105,
     }
     .body {
         background-repeat: none;
+    }
+}
+
+@media screen and (max-width:576px){
+    .weather-background{
+        .weather-title{
+            padding-top: 15vh!important;
+        }
     }
 }

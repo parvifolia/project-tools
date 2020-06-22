@@ -1,3 +1,5 @@
+// Get data from Accuweather
+
 class Forecast {
     constructor(){
         this.key='RmVxi14481HWMfZs7hX8bX2zgtN5WH02';
@@ -23,7 +25,7 @@ class Forecast {
     }
 }
 
-
+// Selectors
 const request = document.querySelector("form");
 const card = document.querySelector(".card");
 const details = document.querySelector(".details");
@@ -54,15 +56,8 @@ const updateUi = (data) => {
     `;
 
     //night-day - ternany operator
-
     let timeSrc = (weather.IsDayTime) ? "/static/img/weather/day.svg" : '/static/img/weather/night.svg' ;
 
-    // let timeSrc = null;
-    // if (weather.IsDayTime){
-    //     timeSrc= 'img/day.svg'
-    // } else {
-    //     timeSrc= 'img/night.svg'
-    // };
 
     background.setAttribute('style',`background-image:url(${timeSrc}); background-repeat: none;background-size:cover; transition: all 0.7s ease;`);
     

@@ -1,13 +1,21 @@
-{% extends 'index.html' %}
+{% extends 'base.html' %}
 {% load static %}
 
-{% block content %}
+{% block head  %}
+
+<title>Weather App | Parvifolia</title>
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+{% endblock head %}
+
+{% block content %}
+
 
 <div class="weather-background">
   
   <div class="container py-3 mx-auto">
-    <h1 class="text-muted text-center py-4">Nerede yaşamak isterdin?</h1>
+    <h1 class="text-muted text-center py-4 weather-title">Nerede yaşamak isterdin?</h1>
 
     <form class="change-location my-3 text-center text-muted">
         <input type="text" name="city" class="form-control p-4">

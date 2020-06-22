@@ -10,11 +10,13 @@
   <meta property="og:title" content=""> 
   <meta property="og:description" content=""> 
   <meta property="og:image" content="link">
+  <link rel="shortcut icon" href="{% static 'img/fav.ico' %}" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet"> 
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="{% static 'assets/style.css' %}">
-  <title></title>
+  {% block head  %}
+  {% endblock head %}
 </head>
 <body>
 

@@ -5,38 +5,38 @@ const todoList = document.querySelector('.todo-list');
 const trashButton = document.querySelector('.trash-btn');
 
 
-//EventListener
-
+//Event Listeners
 todoButton.addEventListener('click', addTodo);
 todoList.addEventListener('click', deleteTodo);
 todoList.addEventListener('click', checkTodo);
 
 
-//Function
+// Local Storage
 
-// function addTodo(e){
-//     e.preventDefault();
-//     //create todo div
-//     const todoDiv = document.createElement('div');
-//     todoDiv.classList.add('todo');
-//     //create li
-//     const newTodo = document.createElement('li');
-//     newTodo.innerText='hey';
-//     newTodo.classList.add('todo-item');
-//     todoDiv.appendChild(newTodo);
-//     //completed button
-//     const completedButton = document.createElement('button');
-//     completedButton.innerHTML='<i class="fas fa-check"></i>';
-//     completedButton.classList.add('complete-btn');
-//     todoDiv.appendChild(completedButton);
-//     //trash button
-//     const trashButton = document.createElement('button');
-//     trashButton.innerHTML='<i class="fas fa-trash"></i>';
-//     trashButton.classList.add('trash-btn');
-//     todoDiv.appendChild(trashButton);
-//     //append to list
-//     todoList.appendChild(todoDiv);
-// }
+let lastTodosLocal = JSON.parse(localStorage.getItem("todos"));
+if (lastTodosLocal){
+    lastTodosLocal.forEach(e=>{
+        html = `
+        <div class="todo">
+            <li class="todo-item">
+                ${e}
+            </li>
+            <button class="complete-btn">
+                <i class="fas fa-check"></i>
+            </button>
+            <button class="trash-btn">
+                <i class="fas fa-trash"></i>
+            </button>
+        </div>`
+        todoList.innerHTML += html;
+        todoInput.value="";
+        console.log("true")
+    })
+} if (!lastTodosLocal) {
+    lastTodosLocal = []
+}
+
+
 
 function addTodo(e){
     e.preventDefault();
@@ -53,6 +53,8 @@ function addTodo(e){
         </button>
     </div>`
     todoList.innerHTML += html;
+    lastTodosLocal.push(todoInput.value);
+    localStorage.setItem("todos",JSON.stringify(lastTodosLocal));
     todoInput.value="";
 };
 
@@ -68,3 +70,4 @@ function checkTodo (e) {
     console.log(check)
     check.classList.add('completed');
 }
+

@@ -1,5 +1,11 @@
-{% extends 'index.html' %}
+{% extends 'base.html' %}
 {% load static %}
+
+{% block head  %}
+
+<title>Tools | Parvifolia</title>
+
+{% endblock head %}
 
 {% block content %}
 
@@ -73,7 +79,7 @@
       <h1>a messenger to get together!</h1>
       <h2>Used tecniques</h2>
       <h3>DOM Manipulation</h3>
-      <h3>Live NoSQL Database</h3>
+      <h3>Real-time Database</h3>
       <h3>Object Oriented Programming</h3>
       <p class='go-app'>Go<br>App</p>
       <a class ='chat-go'href="{% url 'chat' %}">      
@@ -85,7 +91,7 @@
       <h2>Used tecniques</h2>
       <h3>DOM Manipulation</h3>
       <h3>Local Storage</h3>
-      <h3>EcmaScript 6+ Features</h3>
+      <h3>Vanilla JavaScript</h3>
       <p class='go-app'>Go<br>App</p>
       <a class ='todo-go'href="{% url 'todo' %}">      
         <img src="{% static 'img/back.png'%}" alt="todo">

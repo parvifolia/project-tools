@@ -627,6 +627,7 @@
 }
 
 .todo-background .todo-header, .todo-background .todo-form {
+  padding-top: 20vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -639,8 +640,12 @@
   min-height: 20vh;
 }
 
+.todo-background .todo-form {
+  padding-top: 7vh;
+}
+
 .todo-background .todo-form button {
-  padding: 0.5rem;
+  padding: 0.45rem;
   border: none;
   background: white;
   font-size: 2rem;
@@ -731,6 +736,12 @@
   color: gray;
 }
 
+@media screen and (max-width: 576px) {
+  .todo-background .todo-form input {
+    width: 80%;
+  }
+}
+
 .chat-background {
   background-image: -webkit-gradient(linear, left bottom, left top, from(#a8edea), to(#fed6e3));
   background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
@@ -762,6 +773,12 @@
   color: darkgray;
 }
 
+@media screen and (max-width: 576px) {
+  .chat-background .chat-title {
+    padding-top: 20vh !important;
+  }
+}
+
 .weather-background {
   min-height: 100vh;
   background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
@@ -789,4 +806,10 @@
 
 .weather-background .body {
   background-repeat: none;
+}
+
+@media screen and (max-width: 576px) {
+  .weather-background .weather-title {
+    padding-top: 15vh !important;
+  }
 }

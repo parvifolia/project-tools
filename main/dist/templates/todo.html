@@ -1,9 +1,15 @@
-{% extends 'index.html' %}
+{% extends 'base.html' %}
 {% load static %}
 
-{% block content %}
+{% block head  %}
+
+<title>Todo App | Parvifolia</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet"> 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+
+{% endblock head %}
+
+{% block content %}
 
 <div class="todo-background">
 
