@@ -199,16 +199,16 @@ $animationborder :linear-gradient(to right, rgb(38, 105, 102) 100%, rgb(38, 105,
                     .tools-items{
                         display: flex;
                         flex-direction: column;
-                        justify-content: center;
+                        justify-content: flex-end;
                         align-items: center;
+                        height: 100%;
                         .tools-title{
                             text-align: center;
                             font-family: 'Metal Mania';
                             font-weight: 300;
-                            font-size: 7vh;
+                            font-size: 6.5vh;
                             margin-top: 2vh;
                             opacity: 0;
-
                         }
                         .by{
                             font-weight: 300;
@@ -219,6 +219,7 @@ $animationborder :linear-gradient(to right, rgb(38, 105, 102) 100%, rgb(38, 105,
 
                         }
                         .parvifolia{
+                            padding-bottom: 1vh;
                             font-weight: 300;
                             font-family: 'Satisfy';
                             text-align: center;
@@ -635,6 +636,7 @@ $animationborder :linear-gradient(to right, rgb(38, 105, 102) 100%, rgb(38, 105,
     background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
     min-height: 100vh;
 
+
     .container{
         max-width: 600px;
       }
@@ -699,5 +701,16 @@ $animationborder :linear-gradient(to right, rgb(38, 105, 102) 100%, rgb(38, 105,
         .weather-title{
             padding-top: 15vh!important;
         }
+    }
+}
+
+.go-home{
+    display: block;
+    position: absolute;
+    top: 10vh;
+    left: 5vw;
+    img{
+        height: 7vh;
+        cursor: pointer;
     }
 }

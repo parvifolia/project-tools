@@ -47,6 +47,8 @@ backArrow.addEventListener('click', ()=>{
 })
 
 grid.addEventListener('click', e=>{
+
+    // hover animation var
     let b = "linear-gradient(to right, rgba(38, 105, 102,0) 100%, rgba(38, 105, 102,0) 100%)"
 
     if (e.target.classList.contains('blog')){
@@ -74,8 +76,6 @@ grid.addEventListener('click', e=>{
         })
 
         // content appear
-        toolsTitle.innerText="BLOG";
-        toolsTitle.style.fontSize='calc(2vh + 1vw )';
         blogContents.style.display='flex';
 
         //Arrow Animation
@@ -103,8 +103,6 @@ grid.addEventListener('click', e=>{
             e.style.pointerEvents='none';
         })
 
-        toolsTitle.innerText="WEATHER";
-        toolsTitle.style.fontSize='calc(2vh + 1vw )';
         weatherContents.style.display='flex';
 
         if (window.innerWidth < 576) {
@@ -136,9 +134,6 @@ grid.addEventListener('click', e=>{
             e.style.pointerEvents='none';
         })
 
-        toolsTitle.innerText="LIVE CHAT";
-        toolsTitle.style.fontSize='calc(2vh + 1vw )';
-        toolsTitle.style.width='max-content';
         chatContents.style.display='flex';
 
         let tl = gsap.timeline({repeat: 100, repeatDelay: 0, yoyo : true})
@@ -165,8 +160,6 @@ grid.addEventListener('click', e=>{
             e.style.pointerEvents='none';
         })
 
-        toolsTitle.innerText="TO DO";
-        toolsTitle.style.fontSize='calc(2vh + 1vw )';
         todoContents.style.display='flex';
 
 
@@ -179,6 +172,38 @@ grid.addEventListener('click', e=>{
         }
     }
 });
+
+
+// Change Title when hover element
+
+function changeTitle (title) {
+    toolsTitle.innerText=`${title}`;
+    toolsTitle.style.fontSize='calc(2vh + 1vw )';
+    toolsTitle.style.width='max-content';
+    gsap.to(".tools-title",{opacity:1,duration:0.3});
+}
+
+blog.addEventListener('mouseenter',()=>{
+    gsap.to(".tools-title",{opacity:0, duration:0.3,onComplete:changeTitle,onCompleteParams:["BLOG"]})
+})
+weather.addEventListener('mouseenter',()=>{
+    gsap.to(".tools-title",{opacity:0,duration:0.3,onComplete:changeTitle,onCompleteParams:["WEATHER"]})
+})
+chat.addEventListener('mouseenter',()=>{
+    gsap.to(".tools-title",{opacity:0,duration:0.3,onComplete:changeTitle,onCompleteParams:["CHAT"]})
+})
+todo.addEventListener('mouseenter',()=>{
+    gsap.to(".tools-title",{opacity:0,duration:0.3,onComplete:changeTitle,onCompleteParams:["TODO"]})
+})
+
+
+
+
+
+
+
+
+
 
 
 
@@ -201,19 +226,19 @@ tl.to('.chat', {
     duration: 0.5,
     opacity:1,
     ease: Power1. easeIn,
-},"-=0.2")
+},"-=0.3")
 
 tl.to('.todo', {
     duration: 0.5,
     opacity:1,
     ease: Power1. easeIn,
-},"-=0.2")
+},"-=0.3")
 
 tl.to('.blog', {
     duration: 0.5,  
     opacity:1,
     ease: Power1. easeIn,
-},"-=0.2")
+},"-=0.3")
 
 
 tl.to('.by', {
@@ -225,5 +250,5 @@ tl.to('.parvifolia', {
     duration: 0.5,
     opacity:1,
     ease: Power1. easeIn,
-},"-=0.5")
+},"-=0.3")
 

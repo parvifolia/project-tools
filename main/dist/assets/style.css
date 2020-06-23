@@ -244,19 +244,20 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 100%;
 }
 
 .background-wrapper .grid-wrapper .grid-wrapper-center .grid-items-wrapper .tools .tools-items .tools-title {
   text-align: center;
   font-family: 'Metal Mania';
   font-weight: 300;
-  font-size: 7vh;
+  font-size: 6.5vh;
   margin-top: 2vh;
   opacity: 0;
 }
@@ -270,6 +271,7 @@
 }
 
 .background-wrapper .grid-wrapper .grid-wrapper-center .grid-items-wrapper .tools .tools-items .parvifolia {
+  padding-bottom: 1vh;
   font-weight: 300;
   font-family: 'Satisfy';
   text-align: center;
@@ -812,4 +814,16 @@
   .weather-background .weather-title {
     padding-top: 15vh !important;
   }
+}
+
+.go-home {
+  display: block;
+  position: absolute;
+  top: 10vh;
+  left: 5vw;
+}
+
+.go-home img {
+  height: 7vh;
+  cursor: pointer;
 }
