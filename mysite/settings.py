@@ -142,10 +142,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-if DEBUG:
-    STATICFILES_DIRS = ['main/dist']
-else:
-    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = ['main/dist']
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 
