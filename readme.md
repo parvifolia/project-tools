@@ -1,13 +1,32 @@
-a boilerplate from parvifolia
+# Tools by Parvifolia
 
-//DESCRIPTION
+a website which you can find my demos with JavaScript.
 
-A Django enviroment with webpack and babel, automaticly watching for changes.
-Also heroku configurationd added for easily publish on heroku.
 
-//USAGE
+## Apps
 
-1. Open Terminal
-2. npm install > for download node_modules
-3. npm run build > for watching changes
+* Blog
+* Weather App
+* Todo App
+* Real Time Chat App
 
+## Visit website:
+
+[http://tool.pythonanywhere.com/](tool.pythonanywhere.com)
+
+### Note
+
+If you are not familiar with Django, here you can find directories for works.
+
+1. Blog App
+
+html: blog/templates/blog
+css and js: blog/static/
+
+
+2. Weather App - Todo App -Real Time Chat App
+
+html: main/dist/templates/
+css: main/src/scss/
+js original: main/src/js/index.js
+js webpack bundle : dist/assets/bundle.js   
