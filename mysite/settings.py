@@ -21,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '(mn62-n5sngy8guhs7#6io^+27b(xly(%b2d_$e8zgi^mp6513'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['.herokuapp.com','.pythonanywhere.com','127.0.0.1']
 
@@ -142,9 +142,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = ['main/dist']
-
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+if DEBUG:
+    STATICFILES_DIRS = ['main/dist']
+else:
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 
