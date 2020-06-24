@@ -26,7 +26,7 @@ Css and Js | blog/static/
 
   
 
-Weather App - Todo App -Real Time Chat App |  
+Weather-Todo-Real Time Chat Apps |  
 --- | --- 
 Html | main/dist/templates/
 Css | main/src/scss/
