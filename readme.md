@@ -18,15 +18,16 @@ a website which you can find my demos with JavaScript.
 
 If you are not familiar with **Django**, here you can find application directories.
 
-* Blog App
 
-⋅⋅* html: blog/templates/blog
-⋅⋅* css and js: blog/static/
+Blog App
+--- | --- | ---
+Html | blog/templates/blog
+Css and Js | blog/static/
 
+  
 
-* Weather App - Todo App -Real Time Chat App
-
-⋅⋅* html: main/dist/templates/
-⋅⋅* css: main/src/scss/
-⋅⋅* js original: main/src/js/index.js
-⋅⋅* js webpack bundle : dist/assets/bundle.js   
+Weather App - Todo App -Real Time Chat App
+--- | --- | ---
+Html | main/dist/templates/
+Css | main/src/scss/
+Js | main/src/js/index.js
