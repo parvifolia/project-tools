@@ -11,7 +11,7 @@ todoList.addEventListener('click', deleteTodo);
 todoList.addEventListener('click', checkTodo);
 
 
-// Local Storage
+// Check Local Storage and update Ui
 
 let lastTodosLocal = JSON.parse(localStorage.getItem("todos"));
 if (lastTodosLocal){
@@ -30,7 +30,6 @@ if (lastTodosLocal){
         </div>`
         todoList.innerHTML += html;
         todoInput.value="";
-        console.log("true")
     })
 } if (!lastTodosLocal) {
     lastTodosLocal = []
@@ -53,13 +52,25 @@ function addTodo(e){
         </button>
     </div>`
     todoList.innerHTML += html;
+
+    // add value to local storage
     lastTodosLocal.push(todoInput.value);
     localStorage.setItem("todos",JSON.stringify(lastTodosLocal));
+
+    //clear input
     todoInput.value="";
 };
 
 function deleteTodo (e){
     if (e.target.classList.contains('trash-btn')){
+ 
+    // delete todo from local storage
+    const trashText=e.target.parentElement.children[0].innerText;
+    const indexTodo = lastTodosLocal.indexOf(trashText);
+    lastTodosLocal.splice(indexTodo,1);
+    localStorage.setItem("todos",JSON.stringify(lastTodosLocal));
+
+    // delete todo from ui
     const trash=e.target.parentElement;
     trash.remove()
     }
@@ -67,7 +78,5 @@ function deleteTodo (e){
 
 function checkTodo (e) {
     const check=e.target.parentElement;
-    console.log(check)
-    check.classList.add('completed');
+    check.classList.toggle('completed');
 }
-

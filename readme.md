@@ -1,6 +1,6 @@
 # Tools by Parvifolia
 
-a website which you can find my demos with JavaScript.
+a website where is you can find my demos coded with JavaScript.
 
 
 ## Apps

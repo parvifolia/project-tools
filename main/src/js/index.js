@@ -173,12 +173,11 @@ grid.addEventListener('click', e=>{
     }
 });
 
-
 // Change Title when hover element
 
 function changeTitle (title) {
     toolsTitle.innerText=`${title}`;
-    toolsTitle.style.fontSize='calc(2vh + 1vw )';
+    toolsTitle.style.fontSize='calc(2vh + 1.4vw )';
     toolsTitle.style.width='max-content';
     gsap.to(".tools-title",{opacity:1,duration:0.3});
 }
@@ -195,6 +194,8 @@ chat.addEventListener('mouseenter',()=>{
 todo.addEventListener('mouseenter',()=>{
     gsap.to(".tools-title",{opacity:0,duration:0.3,onComplete:changeTitle,onCompleteParams:["TODO"]})
 })
+
+
 
 
 
