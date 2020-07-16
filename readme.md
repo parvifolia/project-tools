@@ -12,7 +12,7 @@ a website where is you can find my demos coded with JavaScript.
 
 ## Visit website:
 
-[http://tool.pythonanywhere.com/](tool.pythonanywhere.com)
+[tool.pythonanywhere.com](http://tool.pythonanywhere.com/)
 
 ### Note
 
