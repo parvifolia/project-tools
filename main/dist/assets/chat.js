@@ -82,7 +82,6 @@ roomTarget.addEventListener('click',e=>{
     if (e.target.getAttribute('id')){
         chatUi.clear();
         chatroom.updateRoom(e.target.getAttribute('id'))
-        console.log(e.target.getAttribute('id'))
     }
 })
 
